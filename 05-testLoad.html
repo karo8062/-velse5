@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>html struktur</title>
+  </head>
+  <body>
+    <header>
+      <h1>Titel</h1>
+    </header>
+    <main>
+      <h2>Undertitel</h2>
+      <section>
+        <article>
+          <img src="fotos/cykel.jpg" alt="cykel" />
+          <h3>Article 1</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque minus corrupti ullam officia delectus sequi quod eum praesentium cupiditate, vel maxime dolorum, hic vero? Impedit cumque voluptate nesciunt inventore nostrum ipsa aut explicabo recusandae expedita reprehenderit ipsum, quia aperiam, dolorum mollitia deleniti, voluptatibus at qui corrupti saepe nihil non vitae!</p>
+        </article>
+        <article>
+          <img src="fotos/dame.jpg" alt="dame" />
+          <h3>Article 2</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque minus corrupti ullam officia delectus sequi quod eum praesentium cupiditate, vel maxime dolorum, hic vero? Impedit cumque voluptate nesciunt inventore nostrum ipsa aut explicabo recusandae expedita reprehenderit ipsum, quia aperiam, dolorum mollitia deleniti, voluptatibus at qui corrupti saepe nihil non vitae!</p>
+        </article>
+      </section>
+    </main>
+    <footer>This is the footer</footer>
+    <script>
+      //konstanter
+      /*
+      const overskift = document.querySelector("h1");
+      console.log(overksift);
+
+      const underoverskirft = document.querySelector("h2");
+      console.log(underoverskirft);
+
+      const lilleoverskirft = document.querySelector("h3");
+      console.log(lilleoverskirft);
+
+      const fotos = document.querySelector("img");
+      console.log(fotos);
+      /*
+      const tekst = document.querySelector("p");
+      console.log(tekst);
+
+      const footer = document.querySelector("footer");
+      console.log(footer);
+
+___________________________________________________________________
+
+      //øvelse 2B - udskift tekst indhold i elementer
+      const overskrift = document.querySelector("h1");
+      const artikel1 = document.querySelector("article:nth-child(1) p");
+      overskrift.textContent;
+      console.log(overskrift.textContent);
+      overskrift.textContent = "billeder";
+      console.log(overskrift.textContent);
+      artikel1.textContent = "her er et billede af en mand med en cykel";
+*/
+
+      //øvelse 3 - indhold:
+
+      const pic1 = document.querySelector("article:nth-child(1) img");
+      console.log(pic1);
+      pic1.src = "fotos/dame.jpg";
+      pic1.alt = "dame med en cykel";
+
+      //øvelse 4
+
+      let mainSection = document.querySelector("section");
+      //nyt article element
+      let newArticle = document.createElement("article");
+      //nyt H# element
+      let overskrift = document.createElement("h3");
+      //tekst til overskriften
+      let overskriftText = document.createTextNode("Article 3");
+      //indsæt tekst i overskrift
+      overskrift.appendChild(overskriftText);
+      //tilføj overskrift til article
+      newArticle.appendChild(overskrift);
+      //tilføj article til section
+      mainSection.appendChild(newArticle);
+    </script>
+  </body>
+</html>
